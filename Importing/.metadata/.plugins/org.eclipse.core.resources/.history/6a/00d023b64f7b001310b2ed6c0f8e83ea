@@ -1,0 +1,23 @@
+package yoyo;
+
+import java.util.Iterator;
+import java.util.Random;
+
+public class RandomPasswordGenerator {
+	
+	public static String createString() {
+		Random random = new Random();
+		
+		String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		
+		
+		char[] alphabet = alphabetString.toCharArray();
+		
+		for (int i = 0; i < 8; i++) {
+			System.out.println(alphabet[random.nextInt(alphabet.length)]);
+		}
+		
+		return null;
+		
+	}
+}

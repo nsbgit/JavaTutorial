@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+   <!-- **************** Add Exam Type ******************* --> 	
+	<package  name="examType" namespace="/ExamType" extends="struts-default">									
+		<action name="addExamType" method="prepareForExamType"  class="com.cce.web.cceadmin.ExamTypeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForExamType</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddExamType.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+	 	<action name="saveExamType" method="saveExmTpe"  class="com.cce.web.cceadmin.ExamTypeAction">
+			<result name="input">../CCEAdmin/AddExamType.jsp</result>
+			<result name="error" >../CCEAdmin/AddExamType.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddExamType.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.ExamTypeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewExamType.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="editType" method="edit"  class="com.cce.web.cceadmin.ExamTypeAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddExamType.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.ExamTypeAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result type="redirect">view.html</result>
+			<result name="error">../CCEAdmin/ViewExamType.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.ExamTypeAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.ExamTypeAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewExamType.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	<!-- **************** Add Exam Name ******************* -->
+	<package  name="examName" namespace="/ExamName" extends="struts-default">									
+		<action name="addExamName" method="prepareForExamName"  class="com.cce.web.cceadmin.ExamNameAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForExamName</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveExamName" method="saveExmName"  class="com.cce.web.cceadmin.ExamNameAction">
+			<result name="input">../CCEAdmin/AddExamName.jsp</result>
+			<result name="error" >../CCEAdmin/AddExamName.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddExamName.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.ExamNameAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.ExamNameAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.ExamNameAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result type="redirect">view.html</result>
+			<result name="error">../CCEAdmin/ViewExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.ExamNameAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.ExamNameAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	 <!-- **************** Add Paper ******************* --> 	
+	 <package  name="paper" namespace="/Paper" extends="struts-default">									
+		<action name="addPaper" method="prepareForPaper"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForPaper</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="subjectBind" method="standWiseSubject"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">standWiseSubject</param>
+      			</interceptor-ref>	
+		</action>
+		<action name="savePaper" method="savePaper"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+			<result name="input">../CCEAdmin/AddPaper.jsp</result>
+			<result name="error" >../CCEAdmin/AddPaper.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddPaper.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.ScholasticPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewScolPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result type="redirect">view.html</result>
+			<result name="error">../CCEAdmin/ViewExamName.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.ScholasticPaperAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.ScholasticPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewScolPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	<!-- **************** Add Grade ******************* --> 	
+	 <package  name="grade" namespace="/Grade" extends="struts-default">									
+		<action name="addGrade" method="prepareForGrade"  class="com.cce.web.cceadmin.GradeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForGrade</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddGrade.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="save" method="save"   class="com.cce.web.cceadmin.GradeAction">
+			<result name="input">../CCEAdmin/AddGrade.jsp</result>
+			<result name="error" >../CCEAdmin/AddGrade.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddGrade.jsp</result>
+			<result name="update" type="redirect">viewSchool.html</result>	
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.GradeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewGrade.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">viewStandard.html</result>
+		</action>	
+	</package>
+	
+	<!-- **************** Add Grade (5 point scale) ******************* --> 	
+	 <package  name="grade5pointScale" namespace="/Grade5PointScale" extends="struts-default">									
+		<action name="addGrade" method="prepareForGrade"  class="com.cce.web.cceadmin.GradeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForGrade</param>
+      		</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddGrade5pointScale.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="save" method="save"   class="com.cce.web.cceadmin.GradeAction">
+			<result name="input">../CCEAdmin/AddGrade5pointScale.jsp</result>
+			<result name="error" >../CCEAdmin/AddGrade5pointScale.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddGrade5pointScale.jsp</result>
+			<result name="update" type="redirect">viewSchool.html</result>	
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.GradeAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewGrade.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">viewStandard.html</result>
+		</action>	
+	</package>
+	<!-- **************** Add Co-Scholastic Areas ******************* --> 	
+	 <package  name="areas" namespace="/CoSchoAreas" extends="struts-default">									
+		<action name="addAreas" method="prepare"  class="com.cce.web.cceadmin.CoSchoAreasAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddCoScholasticAreas.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="save" method="save"   class="com.cce.web.cceadmin.CoSchoAreasAction">
+			<result name="input">../CCEAdmin/AddCoScholasticAreas.jsp</result>
+			<result name="error" >../CCEAdmin/AddCoScholasticAreas.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddCoScholasticAreas.jsp</result>
+			<result name="update" type="redirect">view.html</result>	
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.CoSchoAreasAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewCosholArea.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.CoSchoAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddCoScholasticAreas.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.CoSchoAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result type="redirect">view.html</result>
+			<result name="error">../CCEAdmin/ViewCosholArea.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.CoSchoAreasAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.CoSchoAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewCosholArea.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	
+	<!-- **************** Add Co-Scholastic Sub Areas ******************* --> 	
+	 <package  name="subAreas" namespace="/CoSchoSubAreas" extends="struts-default">									
+		<action name="addSubAreas" method="prepare"  class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddCoScholasticSubAreas.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="getArea" method="prepareForAreas"  class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="save" method="save"   class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+			<result name="input">../CCEAdmin/AddCoScholasticSubAreas.jsp</result>
+			<result name="error" >../CCEAdmin/AddCoScholasticSubAreas.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddCoScholasticSubAreas.jsp</result>
+			<result name="update" type="redirect">view.html</result>	
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		
+		<action name="view" method="view"   class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewCosholSubArea.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddCoScholasticSubAreas.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>			
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.CoSchoSubAreasAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewCosholSubArea.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	
+	
+	
+	<!-- **************** Add Co-Scholastic Paper ******************* --> 	
+	 <package  name="CoSchoPaper" namespace="/CoSchoPaper" extends="struts-default">									
+		<action name="addPaper" method="prepare"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddCoScholasticPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="getArea" method="prepareForAreas"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="getSubArea" method="prepareForSubAreas"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForSubAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="save" method="save"   class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<result name="input">../CCEAdmin/AddCoScholasticPaper.jsp</result>
+			<result name="error" >../CCEAdmin/AddCoScholasticPaper.jsp</result>						   				
+			<result  name="success" >../CCEAdmin/AddCoScholasticPaper.jsp</result>
+			<result name="update" type="redirect">view.html</result>	
+		</action>
+		<action name="view" method="view"   class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../CCEAdmin/ViewCoScolPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>			
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.cceadmin.CoSchoPaperAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+       		<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/AddCoScholasticPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.CoSchoPaperAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../CCEAdmin/ViewCoScolPaper.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action> 
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	
+	
+	<!-- **************** Student Promotion ******************* --> 
+		
+	 <package  name="Promotion" namespace="/Promotion" extends="struts-default">									
+		<action name="view" method="prepare"  class="com.cce.web.cceadmin.Promotion">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/promote.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="standWiseStudent" method="studentList"  class="com.cce.web.cceadmin.Promotion">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">studentList</param>
+      			</interceptor-ref>	
+      		<result  name="prepare" >../CCEAdmin/ViewForPromotion.jsp</result>		   								
+		</action>
+		<action name="Promote" method="promoteStudent"  class="com.cce.web.cceadmin.Promotion">	
+			<result name="input">../CCEAdmin/ViewForPromotion.jsp</result>		
+      		<result  name="prepare" >../Report/promotedStudentDetails.jsp</result>
+      		<result  name="success" >../CCEAdmin/ViewForPromotion.jsp</result>		   								
+		</action>
+		
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>
+			
+	</package>
+	
+	<!-- **************** Descriptive Indicators ******************* --> 
+		
+	 <package  name="Indicators" namespace="/Indicators" extends="struts-default">									
+		<action name="add" method="prepare"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/AddDescriptiveIndicators.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="getArea" method="prepareForAreas"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="getSubArea" method="prepareForSubAreas"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForSubAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="save" method="save"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<result name="input">../CCEAdmin/AddDescriptiveIndicators.jsp</result>		
+      		<result  name="prepare" >../Report/AddDescriptiveIndicators.jsp</result>
+      		<result  name="success" >../CCEAdmin/AddDescriptiveIndicators.jsp</result>	
+      		<result name="update" type="redirect">view.html</result>	   								
+		</action>
+				
+		<action name="view" method="view"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/ViewDescriptiveIndicators.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">delete</param>
+      			</interceptor-ref>			   					
+			<result  name="success" type="redirect" >view.html</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">show</param>
+      			</interceptor-ref>			   					
+			<result  name="success">../Common/CommonShowDetails.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">edit</param>
+      			</interceptor-ref>			   					
+			<result  name="success">../CCEAdmin/AddDescriptiveIndicators.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.cceadmin.DescriptiveIndicatorsAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">search</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../CCEAdmin/ViewDescriptiveIndicators.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>
+			
+	</package>
+	
+ </struts>

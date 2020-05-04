@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+D:\WORK & OTHER\Works\Sukanta Sharma\Dropbox\Java Program on Dropbox\Globsyn\.metadata\.plugins\org.eclipse.jdt.core
+1694090281.index
+1005943932.index
+2147548012.index
+3666446936.index

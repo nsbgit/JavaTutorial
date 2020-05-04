@@ -1,0 +1,16 @@
+package t1;
+
+public class B4 extends A4
+{
+	B4()
+	{
+		super();
+		/* Compiler will create this super function if we didn't write this.
+		 * 1. super() function should be written in the first line of a constructor
+		 * */
+		//super(5);//we have to use super for argument constructor
+		System.out.println("HELLO");
+	}
+
+
+}

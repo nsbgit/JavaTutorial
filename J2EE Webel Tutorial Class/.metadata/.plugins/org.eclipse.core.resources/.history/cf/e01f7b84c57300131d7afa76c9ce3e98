@@ -1,0 +1,138 @@
+package logic;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dto.Student;
+
+
+public class MyFirstLogic {
+	
+	//private Connection con;
+	//private PreparedStatement ps;
+	private int successfullDatabaseUpdateChecker;
+	private Connection connection;
+	private PreparedStatement preparedStatement;
+	private ResultSet resultSet;
+	private int countColumn;
+	private String[] data;
+	private ArrayList arrayList;
+	
+	
+	public int insert(Student student) {
+		try {
+			connection = DatabaseConnectionOpen.createConnection(); // Create connection object for all connection process with database
+			
+			/*
+			 * This connection will receive the object from the corresponding method call.
+			 * This connection is the connection object all types of database connection is done
+			 * with this object
+			 * */
+			
+			/********	ADDING OR INSERTING A DATA FROM JSP PAGE TO DATA BASE THROUGH SQL COMMAND	**********/
+			
+			String sql = "INSERT INTO student(name, address, gender, standard, contactNumber) VALUES(?,?,?,?,?)";
+			/*
+			 * The question marks (?) will be replaced by the value passed here from the jsp page by the following code 
+			 * */
+			
+			preparedStatement = connection.prepareStatement(sql);
+			
+			preparedStatement.setString(1, student.getName());  // this line will replace the first question mark with the data of name and so on
+			preparedStatement.setString(2, student.getAddress());
+			preparedStatement.setString(3, student.getGender());
+			preparedStatement.setString(4, student.getStandard());
+			preparedStatement.setString(5, student.getContactNumber());
+			
+			successfullDatabaseUpdateChecker = preparedStatement.executeUpdate();
+			//System.out.println(successfullDatabaseUpdateChecker);
+			
+			// return 1 for successful insertion of 1 row and 2 for 2 row and so on and 0 for no updation occured 
+			
+			/*************************************************************************************************/
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				preparedStatement.close();
+				connection.close();
+				
+				/*
+				 * This preparedStatement and connection is to be close on a stack(LIFO) manner
+				 * i.e. which is created at last that will close at the first
+				 * */
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return successfullDatabaseUpdateChecker;
+	}
+	
+	public ArrayList getRecords() {
+		try {
+			connection = DatabaseConnectionOpen.createConnection();
+			String sql = "SELECT name, address, gender, standard, contactNumber FROM student";// Select attributes from table student
+			preparedStatement = connection.prepareStatement(sql);
+			resultSet = preparedStatement.executeQuery();
+			/*
+			 * As here any row is not affected trough the selection
+			 * process so that we would call executeQuery() method which
+			 * will return a object which will contain all the mata-data
+			 * of the database.
+			 * 
+			 * It is result set which contains the metadata i.e. all information of the table and attribute selected
+			 * then we have to store rs data into a array list object
+			 * */
+			//String[] data; // String array of object
+			countColumn = resultSet.getMetaData().getColumnCount(); // Get the column number that resultSet holds
+			arrayList = new ArrayList();
+			data = new String[countColumn];
+			while (resultSet.next()) { // resultSet.next() will return true if there is present next row in resultSet object
+				
+					System.out.println(resultSet.getString(1));
+					System.out.println(resultSet.getString(2));
+					System.out.println(resultSet.getString(3));
+					System.out.println(resultSet.getString(4));
+				
+				//data = new String[countColumn];
+				
+				for (int i = 0; i < countColumn; i++) {
+					data[i] = resultSet.getString(i+1);//Attribute is started from 1 in resultSet meta-data and the data i.e. the string objects are stored in a array of string object
+				}
+				arrayList.add(data); //the sting array is stored in array list
+				/*
+				 * As we have to close the connection as well as the preparedStatement and the resultSet so the
+				 * value we need will be also destroyed, so as a solution we stores the data in a array list
+				 * before closing of the connections and all.
+				 * */
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				resultSet.close();
+				preparedStatement.close();
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		return arrayList;
+		
+	}
+}

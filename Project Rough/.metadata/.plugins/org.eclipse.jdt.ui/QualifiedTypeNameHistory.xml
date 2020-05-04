@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="first.UserRegistrationData"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="first.UserRegistrationFrame1"/>
+<fullyQualifiedTypeName name="first.AdminUserGUI1"/>
+<fullyQualifiedTypeName name="first.AdminLoginGUI1"/>
+<fullyQualifiedTypeName name="first.DiaplayAll"/>
+<fullyQualifiedTypeName name="first.AdminPageGUI1"/>
+<fullyQualifiedTypeName name="first.AdminUserFrame1"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="first.UserLoginGUI1"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="first.UserPageGUI"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="test.AddInformation2"/>
+<fullyQualifiedTypeName name="test.AddInformation3"/>
+<fullyQualifiedTypeName name="test.Create"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="test.displayAll2"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,77 @@
+package test;
+
+import java.util.Calendar;
+
+public class FetchSystemDateAndTime {
+
+	private static String calDate;
+	private static String calMonth;
+	private static String calYear;
+	private static String sysDate;
+	private static Calendar calendar;
+	private static String calHour;
+	private static String calMin;
+	private static String calSec;
+	private static String sysTime;
+	private static String calDay;
+	private static String sysDay;
+	private static String calAmPm;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		calendar = Calendar.getInstance();
+		
+		calDate = "" + calendar.get(Calendar.DATE);
+		calMonth = "" + (calendar.get(Calendar.MONTH));
+		calYear = "" + calendar.get(Calendar.YEAR);
+		sysDate = calDate + "/" + calMonth + "/" + calYear;
+		
+		calHour = "" + calendar.get(Calendar.HOUR);
+		calMin = "" + calendar.get(Calendar.MINUTE);
+		calSec = "" + calendar.get(Calendar.SECOND);
+		calAmPm = "" + calendar.get(Calendar.AM_PM);
+		/*
+		if (calendar.get(Calendar.AM_PM) != 1) {
+			calAmPm = "AM";
+		} else {
+			calAmPm = "PM";
+		}
+		*/
+		sysTime = calHour + ":" + calMin + ":" + calSec + " " + calAmPm;
+		
+		calDay = "" + calendar.get(Calendar.DAY_OF_WEEK);
+		switch (Integer.parseInt(calDay)) {
+		case 1:
+			sysDay = "Sunday";
+			break;
+		case 2:
+			sysDay = "Monday";
+			break;
+		case 3:
+			sysDay = "Tuesday";
+			break;
+		case 4:
+			sysDay = "Wednesday";
+			break;
+		case 5:
+			sysDay = "Thursday";
+			break;
+		case 6:
+			sysDay = "Friday";
+			break;
+		case 7:
+			sysDay = "Satuarday";
+			break;
+		default:
+			break;
+		}
+		
+		System.out.println("System Date : " + sysDate);
+		System.out.println("System Time : " + sysTime);
+		System.out.println("System Day : " + sysDay);
+	}
+
+}

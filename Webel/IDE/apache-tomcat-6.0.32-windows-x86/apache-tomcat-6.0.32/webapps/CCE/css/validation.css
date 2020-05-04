@@ -1,0 +1,85 @@
+fieldset {
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #d1d1d1;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+
+}
+
+fieldset legend {
+	font: normal 30px Verdana, Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px #fff;
+	letter-spacing: -1px;
+	color: #273953;
+}
+
+
+
+.block {
+	display: block;
+}
+
+small {
+	letter-spacing: 1px;
+	font-size: 11px;
+	font-style: italic;
+	color: #9e9e9e;
+}
+
+.info {
+	text-align: left;
+	padding: 5px;
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	color: #fff;
+	position: absolute;
+	display: none;
+	
+	
+}
+
+.error {
+	background:url(../images/error.png);
+	color:#A00;
+	border:1px solid #B00;
+	
+	
+}
+
+.correct {
+	background:url(../images/currect.png) no-repeat; text-indent:-1000px;
+	width:21px; height:19px;
+}
+
+.wrong {
+	border:1px solid #B00 !important;
+	
+	color:#9a2b2b 
+}
+
+.normal {
+	
+}
+
+/*#send {
+	background: #3f5a81;
+	width: 100%;
+	border: 5px solid #0F1620;
+	font: bold 30px Verdana, sans-serif;
+	color: #fafafa;
+	text-shadow: 1px 1px 1px #0F1620;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+
+#send:hover {
+	background: #4d76b1;
+	border: 5px solid #253750;
+	color: #fff;
+}
+
+#send:active {
+	text-indent: -10px;
+}*/

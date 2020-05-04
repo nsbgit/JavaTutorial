@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>bipjsp2</display-name>
+  <welcome-file-list>
+    <welcome-file>bp.jsp</welcome-file>
+    
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Myfirstservlet</display-name>
+    <servlet-name>Myfirstservlet</servlet-name>
+    <servlet-class>controller.Myfirstservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Myfirstservlet</servlet-name>
+    <url-pattern>/Myfirst.do</url-pattern>
+  </servlet-mapping>
+</web-app>

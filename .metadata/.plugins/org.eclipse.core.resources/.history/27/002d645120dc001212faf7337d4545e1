@@ -1,0 +1,36 @@
+package genrx;
+
+
+class D<T>
+{
+	private T firstvalue;
+	private T secondvalue;
+	
+	D(T f1 , T f2)
+	{
+		firstvalue = f1;
+		secondvalue = f2;
+		
+	}
+	
+	void display()
+	{
+		System.out.println("First Value is = "+ firstvalue);
+		System.out.println("Second Value is = "+ secondvalue);
+		
+	}
+}
+
+
+public class GenerixMain 
+{
+	 public static void main(String[] args) 
+		{
+		 	D<Integer> ob1 = new D<Integer>(5,10);
+			D<String> ob2 = new D<String>("HELLO","HI");
+			ob1.display();
+			ob2.display();
+			
+		}
+
+}

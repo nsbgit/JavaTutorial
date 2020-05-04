@@ -1,0 +1,43 @@
+
+		.header{
+			background-color: #a768f2;
+			color: #ffffff;
+			font-size: 26px;
+			font-weight: bold
+		}
+		LABEL{
+			color: #a768f2;
+			font-weight: bold;
+			padding-left: 30px
+		}
+		.box{
+		box-shadow: 10px 10px 15px #ddcef0;
+		background-color: white;
+		}
+		.body{
+			background-color: #F8FACA;
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+		}
+		.btn{
+			background-color: #a768f2;
+			color: white;
+			font-weight: bold;
+		}
+		
+		EM {
+			color: red;
+			font-family: cursive;
+		}
+		
+		.pageHeader {
+			color: #a768f2;
+			font-family: cursive;
+		}
+		
+		.sessionMessage {
+			color: green;
+			font-style: italic;
+			font-family: cursive;
+		}

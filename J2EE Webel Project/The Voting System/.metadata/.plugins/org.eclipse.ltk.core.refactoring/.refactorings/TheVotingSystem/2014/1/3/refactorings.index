@@ -1,0 +1,6 @@
+1389584408813	Convert local variable 'voterRegistrationInformation' to field
+1389629750396	Convert local variable 'voterSignInHistory' to field
+1389630311007	Convert local variable 'connection' to field
+1389633479952	Convert local variable 'preparedStatement' to field
+1389727943498	Encapsulate field 'approved'
+1390034086557	Encapsulate field 'voteName'

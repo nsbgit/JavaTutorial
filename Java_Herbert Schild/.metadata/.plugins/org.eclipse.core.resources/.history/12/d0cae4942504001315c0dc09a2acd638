@@ -1,0 +1,42 @@
+package test;
+
+public class Account
+{
+	private int account_Number;
+	static int cnt=100000;
+	private String name;
+	private double balance;
+	Account(){}
+	void Account1(String name)
+	{
+		System.out.println("jgjgjg" + name);
+		account_Number=++cnt;
+		this.name=name;
+		balance=1000;
+	}
+	void deposit(double amount)
+	{
+		balance=balance+amount;
+	}
+	void withdrawal(double amount)
+	{
+		if(balance>1000)
+		{
+			if(amount<=balance)
+				balance=balance-amount;
+			else
+				System.out.println("Maximum amount can be withdrwan= "+(balance-1000));
+		}
+		else
+			System.out.println("Sorry... Transaction failed.\n You should keep minimum balance 1000");
+	}
+	void show()
+	{
+		System.out.println("Your account balance=  "+balance);
+	}
+	int get_Accountnumber()
+	{
+		return account_Number;
+	}
+
+}

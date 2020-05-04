@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="250" key="DIALOG_Y_ORIGIN"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="1311" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="DiaplayAll2" key="selection"/>
+		<list key="findhistory">
+			<item value="DiaplayAll2"/>
+			<item value="DiaplayAll"/>
+			<item value="bcpanel"/>
+			<item value="tid9"/>
+			<item value="kop"/>
+			<item value="tid10"/>
+			<item value="tid0"/>
+			<item value="Regi1.dat"/>
+		</list>
+		<list key="replacehistory">
+			<item value="DiaplayAll2"/>
+			<item value="Regi2.dat"/>
+			<item value="rg2"/>
+			<item value="bUpdate"/>
+			<item value="tFName"/>
+			<item value="alistInfoAdd"/>
+			<item value="UserRegistrationData"/>
+			<item value="lTimeValue"/>
+		</list>
+	</section>
+</section>

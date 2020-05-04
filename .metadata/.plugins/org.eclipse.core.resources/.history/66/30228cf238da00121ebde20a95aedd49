@@ -1,0 +1,62 @@
+package t1;
+
+interface I2
+{
+	void f1();
+	void f5();
+}
+
+
+interface I3
+{
+	void f2();
+	void f5();//ambiguity
+}
+
+
+interface I4 extends I2,I3//Multiple inheritance can only occur in interface
+{
+	void f3();
+}
+
+
+class All implements I4
+{
+	public void f1()
+	{
+		System.out.println("F1");
+	}
+	
+	public void f2()
+	{
+		System.out.println("F2");
+	}
+	
+	public void f3()
+	{
+		System.out.println("F3");
+	}
+	public void f5()
+	{
+		System.out.println("F5");
+	}
+}
+
+
+public class InterfaceInheritence
+{
+
+	public static void main(String[] args)
+	{
+		All ob1 = new All();
+		
+		ob1.f1();
+		ob1.f2();
+		ob1.f3();
+		ob1.f5();
+
+	}
+
+}
+
+//ambiguity is removed because two function has same function name but there r no body

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="test1.Super1"/>
+<fullyQualifiedTypeName name="test1.BubbleSort"/>
+<fullyQualifiedTypeName name="java.nio.Buffer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="test1.SelectionSort"/>
+<fullyQualifiedTypeName name="java.lang.Package"/>
+<fullyQualifiedTypeName name="test1.Child"/>
+<fullyQualifiedTypeName name="test1.Parent"/>
+<fullyQualifiedTypeName name="test1.Rectangle"/>
+<fullyQualifiedTypeName name="test1.Triangle"/>
+<fullyQualifiedTypeName name="test1.Figure"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="test.Account"/>
+<fullyQualifiedTypeName name="test.InnerClassDemo"/>
+<fullyQualifiedTypeName name="test.OuterClass"/>
+</qualifiedTypeNameHistroy>

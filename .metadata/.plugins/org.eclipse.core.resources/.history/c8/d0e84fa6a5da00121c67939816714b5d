@@ -1,0 +1,15 @@
+package t1;
+
+public class A4
+{
+	/*A4()
+	{
+		System.out.println("HI");
+	}*/
+	
+	A4(int p)
+	{
+		System.out.println("Overlodded");
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;l2013_08_30.BffrdRdr.main().br&apos; in &apos;l2013_08_30.BffrdRdr.main()&apos; to field&#x0D;&#x0A;- Original project: &apos;LabWork&apos;&#x0D;&#x0A;- Original element: &apos;l2013_08_30.BffrdRdr.main().br&apos;&#x0D;&#x0A;- Field name: &apos;br&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;br&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;l2013_08_30{BffrdRdr.java" name="br" selection="280 52" stamp="1377879246136" static="true" version="1.0" visibility="2"/>
+</session>

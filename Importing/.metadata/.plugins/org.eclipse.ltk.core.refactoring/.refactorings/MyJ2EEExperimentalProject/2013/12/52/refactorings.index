@@ -1,0 +1,7 @@
+1387998806176	Convert local variable 'databaseUpdateChecker' to field
+1387999098074	Convert local variable 'connection' to field
+1388001667113	Convert local variable 'preparedStatement' to field
+1388002912096	Convert local variable 'ession' to field
+1388005989535	Convert local variable 'resultSet' to field
+1388006262726	Convert local variable 'arrayList' to field
+1388006668179	Convert local variable 'data' to field

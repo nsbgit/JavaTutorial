@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;memberAccessAndInheritance.SuperClass.j&apos; in &apos;memberAccessAndInheritance.SuperClass&apos;&#x0D;&#x0A;- Original project: &apos;Inheritance&apos;&#x0D;&#x0A;- Original element: &apos;memberAccessAndInheritance.SuperClass.j&apos;&#x0D;&#x0A;- Getter method name: &apos;getJ&apos;&#x0D;&#x0A;- Setter method name: &apos;setJ&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;j&apos;" flags="589830" getter="getJ" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;memberAccessAndInheritance{SuperClass.java[SuperClass^j" insertion="0" setter="setJ" stamp="1377879315218" version="1.0" visibility="1"/>
+</session>

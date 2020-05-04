@@ -1,0 +1,17 @@
+package test;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte x = 64, y=2;
+		System.out.println("y = " + y);
+		y = (byte) (x << 2);
+		System.out.println("y = " + y);
+
+	}
+
+}

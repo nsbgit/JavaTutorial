@@ -1,0 +1,66 @@
+!SESSION 2013-09-29 08:33:26.987 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -data F:\Webel\Workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 4 0 2013-09-29 08:38:08.250
+!MESSAGE Launching C:\Program Files\Mozilla Firefox\firefox.exe has failed.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.openBrowser(MozillaBrowser.java:103)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.run(MozillaBrowser.java:174)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 6 more
+
+!ENTRY org.eclipse.ui.browser 4 0 2013-09-29 08:38:21.986
+!MESSAGE Launching C:\Program Files\Mozilla Firefox\firefox.exe has failed.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.openBrowser(MozillaBrowser.java:103)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.run(MozillaBrowser.java:174)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 6 more
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-09-29 08:38:56.727
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-09-29 08:38:56.727
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1beee44),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@bdf98d,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@7b3860)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e46f2)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@1beee44),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@bdf98d,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@7b3860)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e46f2)),sourcePriority=1064961)
+
+!ENTRY org.eclipse.ui.browser 4 0 2013-09-29 08:38:58.618
+!MESSAGE Launching C:\Program Files\Mozilla Firefox\firefox.exe has failed.
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program": CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at java.lang.Runtime.exec(Unknown Source)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.openBrowser(MozillaBrowser.java:103)
+	at org.eclipse.ui.internal.browser.browsers.MozillaBrowser$BrowserThread.run(MozillaBrowser.java:174)
+Caused by: java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+	... 6 more

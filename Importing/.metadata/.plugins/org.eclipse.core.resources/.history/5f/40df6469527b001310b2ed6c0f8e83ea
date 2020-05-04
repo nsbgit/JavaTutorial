@@ -1,0 +1,49 @@
+package yoyo;
+
+import java.util.Random;
+
+public class RandomPasswordGenerator {
+	public static String createString() {
+		Random random = new Random();
+		
+		String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		String number = "0123456789";
+		String specialCharString = "`~!@#$%^&*()_-+={}[]|;:',./<>?";
+		
+		StringBuilder builder = new StringBuilder().append(alphabetString);
+		
+		builder.append(specialCharString);
+		
+		char[] alphabet = builder.toString().toCharArray();
+		
+		StringBuilder generator = new StringBuilder();
+		for (int i = 0; i < 8; i++) {
+			generator.append(alphabet[random.nextInt(alphabet.length)]);
+		}
+		
+		return generator.toString();
+	}
+	
+	/*
+	public static String createString() {
+		Random random = new Random();
+		
+		String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		String specialCharString = "`~!@#$%^&*()_-+={}[]|;:',./<>?";
+		
+		StringBuilder builder = new StringBuilder().append(alphabetString);
+		
+		builder.append(specialCharString);
+		
+		char[] alphabet = builder.toString().toCharArray();
+		
+		StringBuilder generator = new StringBuilder();
+		for (int i = 0; i < 8; i++) {
+			generator.append(alphabet[random.nextInt(alphabet.length)]);
+		}
+		
+		return generator.toString();
+		
+	}
+	*/
+}

@@ -1,0 +1,22 @@
+package test;
+
+import java.util.Calendar;
+
+public class FetchSystemDateAndTime {
+
+	private static String calDate;
+	private static String calMonth;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Calendar calendar = Calendar.getInstance();
+		calDate = "" + calendar.get(Calendar.DATE);
+		calMonth = "" + (calendar.get(Calendar.MONTH));
+		
+	}
+
+}

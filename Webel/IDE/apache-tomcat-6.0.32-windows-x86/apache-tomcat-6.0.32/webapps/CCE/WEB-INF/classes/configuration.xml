@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="root" namespace="/" extends="struts-default">
+     	<action name="start"  class="com.cce.web.ProjectSupport">     					
+			<result  name="success">login.jsp</result>
+		</action>				
+		<action name="login_input" method="logIN"  class="com.cce.web.LoginAction">			
+			<result name="input">login.jsp</result>
+			<result name="error" >welcome.jsp</result>
+			<result name="admin" >login.jsp</result>
+			<result name="success" type="redirect">/Common/home.html</result>
+		</action>				
+	</package>
+	<package name="common" namespace="/Common" extends="struts-default">						
+		<action name="editEmployeeImage"   class="com.cce.web.CommonAction">						
+			<result name="success" >/Common/EditLogedEmployeeImage.jsp</result>			
+		</action>
+		<action name="uploadEmployeeImage" method="editEmployeeImage"   class="com.cce.web.CommonAction">	
+			<result name="input">/Common/EditLogedEmployeeImage.jsp</result>					
+			<result name="error" >/Common/EditLogedEmployeeImage.jsp</result>
+			<result name="success" type="redirect">home.html</result>
+		</action>
+		<action name="home" method="getMenu"   class="com.cce.web.CommonAction">						
+			<result>/Common/Home.jsp</result>
+		</action>		
+		<action name="logout" method="logOUT"  class="com.cce.web.LoginAction">			
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">logOUT</param>
+        		</interceptor-ref> 	
+			<result name="success" type="redirect">../admin.html</result>
+		</action>
+		<action name="logoutGen" method="logOUT"  class="com.cce.web.LoginAction">			
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">logOUT</param>
+        		</interceptor-ref> 	
+			<result name="success" type="redirect">../start.html</result>
+		</action>
+		<action name="changePass"   class="com.cce.web.CommonAction">						
+			<result name="success" >../Common/ChangePass.jsp</result>
+		</action>
+		<action name="saveChangePass" method="save"  class="com.cce.web.ChangePasswordAction">						
+			<result name="success" >../Common/ChangePass.jsp</result>
+		</action>														  		          		 		   				          
+    </package>    				
+			
+	
+   
+
+<!-- ***************************************** Admin ************************************************************* -->
+<!-- **************** Add School ******************* --> 	
+	<package  name="school" namespace="/School" extends="struts-default">							
+		<action name="addSchool" method="preapareForSchool"   class="com.cce.web.administrator.AdmAddSchoolAct">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">preapareForSchool</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/AddSchool.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveSchoolInfo" method="saveSchoolInfo"   class="com.cce.web.administrator.AdmAddSchoolAct">
+			<result name="input">../Administrator/AddSchool.jsp</result>
+			<result name="error" >../Administrator/AddSchool.jsp</result>						   				
+			<result  name="success" >../Administrator/AddSchool.jsp</result>
+			<result name="update" type="redirect">viewSchool.html</result>	
+		</action>
+		<action name="viewSchool" method="viewSchoolDetails"   class="com.cce.web.administrator.AdmAddSchoolAct">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">viewSchoolDetails</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewSchoolProfile.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="ShowFullDetailOfSchool" method="showFullDetailsOfSchool"  class="com.cce.web.administrator.AdmAddSchoolAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">showFullDetailsOfSchool</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="editSchool" method="edit"  class="com.cce.web.administrator.AdmAddSchoolAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddSchool.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">viewSchool.html</result>
+		</action>	
+	</package>
+	
+	<!-- **************** Add Standard ******************* --> 	
+	<package  name="standard" namespace="/Standard" extends="struts-default">									
+		<action name="addStandard" method="prepareForStandard"  class="com.cce.web.administrator.AdmStandardAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForStandard</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../Administrator/AddStandard.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveStandard" method="saveStandard"   class="com.cce.web.administrator.AdmStandardAction">
+			<result name="input">../Administrator/AddStandard.jsp</result>
+			<result name="error" >../Administrator/AddStandard.jsp</result>						   				
+			<result  name="success" >../Administrator/AddStandard.jsp</result>
+			<result name="update" type="redirect">viewStandard.html</result>	
+		</action>
+		<action name="viewStandard" method="view"   class="com.cce.web.administrator.AdmStandardAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewStandard.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="showStandrad" method="show"  class="com.cce.web.administrator.AdmStandardAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="editStandrad" method="edit"  class="com.cce.web.administrator.AdmStandardAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddStandard.jsp</result>
+		</action>
+		<action name="deleteStandrad" method="delete"  class="com.cce.web.administrator.AdmStandardAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">viewStandard.html</result>
+		</action>
+		<action name="searchStandrad" method="search"  class="com.cce.web.administrator.AdmStandardAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare">../Administrator/ViewStandard.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">viewStandard.html</result>
+		</action>	
+	</package>
+	<!-- **************** Add Section ******************* --> 			
+	<package  name="section" namespace="/Section" extends="struts-default">									
+		<action name="addSection" method="prepareForSection"   class="com.cce.web.administrator.AdmSectionAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForSection</param>
+      			</interceptor-ref>				   					
+			<result  name="prepare" >../Administrator/AddSection.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveSection" method="saveSection"   class="com.cce.web.administrator.AdmSectionAction">
+			<result name="input">../Administrator/AddSection.jsp</result>
+			<result name="error" >../Administrator/AddSection.jsp</result>						   				
+			<result  name="success" >../Administrator/AddSection.jsp</result>
+			<result name="update" type="redirect">viewSection.html</result>
+		</action>
+		<action name="viewSection" method="view"   class="com.cce.web.administrator.AdmSectionAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewSection.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.administrator.AdmSectionAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.administrator.AdmSectionAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddSection.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.administrator.AdmSectionAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">viewSection.html</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.administrator.AdmSectionAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/ViewSection.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">viewSection.html</result>
+		</action>	
+	</package>
+	<!-- **************** Add House ******************* --> 	
+	<package  name="house" namespace="/House" extends="struts-default">							
+		<action name="addHouse" method="prepareForHouse"   class="com.cce.web.administrator.AdmHouseAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForHouse</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../Administrator/AddHouse.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveHouse" method="saveHouse"   class="com.cce.web.administrator.AdmHouseAction">
+			<result name="input">../Administrator/AddHouse.jsp</result>
+			<result name="error" >../Administrator/AddHouse.jsp</result>						   				
+			<result  name="success" >../Administrator/AddHouse.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.administrator.AdmHouseAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      		</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewHouse.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.administrator.AdmHouseAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.administrator.AdmHouseAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddHouse.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.administrator.AdmHouseAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.administrator.AdmHouseAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/ViewHouse.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>			
+	</package>
+	<!-- **************** Add Standard Matrix ******************* --> 	
+	<package  name="standradMatrix" namespace="/StandradMatrix" extends="struts-default">									
+		<action name="addStandardMatrix" method="prepareForStandardMatrix"  class="com.cce.web.administrator.AdmStandardMatrixAction">		   					
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForStandardMatrix</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/AddStandardMatrix.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveStandMatrix" method="saveStandardMatrix"   class="com.cce.web.administrator.AdmStandardMatrixAction">
+			<result name="input">../Administrator/AddStandardMatrix.jsp</result>
+			<result name="error" >../Administrator/AddStandardMatrix.jsp</result>						   				
+			<result  name="success" >../Administrator/AddStandardMatrix.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.administrator.AdmStandardMatrixAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewStandardMatrix.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.administrator.AdmStandardMatrixAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.administrator.AdmStandardMatrixAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddStandardMatrix.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.administrator.AdmStandardMatrixAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.administrator.AdmStandardMatrixAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/ViewStandardMatrix.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>
+	</package>
+		<!-- **************** Add Subject ******************* --> 	
+	<package  name="subject" namespace="/Subject" extends="struts-default">								
+		<action name="addSubject" method="getPrepareValue"   class="com.cce.web.administrator.AdmSubjectAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">getPrepareValue</param>
+      			</interceptor-ref>			   					
+			<result  name="prepare" >../Administrator/AddSubject.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveSubject" method="saveSubject"   class="com.cce.web.administrator.AdmSubjectAction">
+			<result name="input">../Administrator/AddSubject.jsp</result>
+			<result name="error" >../Administrator/AddSubject.jsp</result>						   				
+			<result  name="success" >../Administrator/AddSubject.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.administrator.AdmSubjectAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewSubject.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.administrator.AdmSubjectAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.administrator.AdmSubjectAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddSubject.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.administrator.AdmSubjectAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.administrator.AdmSubjectAction">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/ViewSubject.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>
+	</package>
+	<!-- **************** Add User ******************* --> 	
+	<package  name="user" namespace="/User" extends="struts-default">													
+		<action name="addUser" method="prepareForManageUser"  class="com.cce.web.administrator.AdmManageUserAct">	
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">prepareForManageUser</param>
+        	</interceptor-ref>
+			<result name="prepare">../Administrator/addUser.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="saveUser" method="saveUser"  class="com.cce.web.administrator.AdmManageUserAct">							
+			<result name="input">../Administrator/addUser.jsp</result>
+			<result name="error" >../Administrator/addUser.jsp</result>						   				
+			<result  name="success" >../Administrator/addUser.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="emailCheck" method="emailCheck" class="com.cce.web.administrator.AdmManageUserAct">
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">emailCheck</param>
+        	</interceptor-ref>
+		</action>
+		<action name="distBind" method="getDist" class="com.cce.web.administrator.AdmManageUserAct">
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">getDist</param>
+        	</interceptor-ref>
+		</action>
+		<action name="view" method="view"   class="com.cce.web.administrator.AdmManageUserAct">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewUser.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show"  class="com.cce.web.administrator.AdmManageUserAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit"  class="com.cce.web.administrator.AdmManageUserAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/addUser.jsp</result>
+		</action>
+		<action name="delete" method="delete"  class="com.cce.web.administrator.AdmManageUserAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">delete</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>
+		</action>
+		<action name="search" method="search"  class="com.cce.web.administrator.AdmManageUserAct">
+	       <interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/ViewUser.jsp</result>
+		</action>
+		<action name="allowForPermission" method="allowForPermission"  class="com.cce.web.administrator.AdmManageUserAct">
+			<interceptor-ref name="defaultStack">
+	            		<param name="validation.excludeMethods">allowForPermission</param>
+	       	</interceptor-ref> 
+       	<result name="success" >../Administrator/UserAccess.jsp</result>
+		</action>
+		<action name="allowSubject" method="prpareForAccessSubject"  class="com.cce.web.administrator.AssignSubject">
+			<interceptor-ref name="defaultStack">
+	            		<param name="validation.excludeMethods">prpareForAccessSubject</param>
+	       	</interceptor-ref> 
+       	<result name="prepare" >../Administrator/SubjectAccess.jsp</result>
+		</action>
+		<action name="AccessEmployee" method="prpareForAccessEmployee" class="com.cce.web.administrator.AdmManageUserAct">
+		<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">prpareForAccessEmployee</param>
+        		</interceptor-ref> 
+			<result name="prepare">../Administrator/UserAccess.jsp</result>
+		</action>
+		<action name="standard" method="getSubjectByStandard" class="com.cce.web.administrator.AssignSubject">
+				<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">getSubjectByStandard</param>
+        		</interceptor-ref> 			
+		</action>
+		<action name="saveAssignSubject" method="saveAssignSubject"  class="com.cce.web.administrator.AssignSubject">							
+			<result name="input">../Administrator/SubjectAccess.jsp</result>
+			<result name="error" >../Administrator/SubjectAccess.jsp</result>						   				
+			<result  name="success" type="chain" >allowSubject</result>			
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>	
+	</package>
+	<!-- **************** Add Student ******************* --> 	
+	<package  name="student" namespace="/Student" extends="struts-default">												
+		<action name="addStudent" method="prepareValue"   class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+            		<param name="validation.excludeMethods">prepareValue</param>
+        	</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/AddStudent.jsp</result>
+			
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="admNoBind" method="selectAdmissionNo"  class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">selectAdmissionNo</param>
+      			</interceptor-ref>	
+		</action>
+		<action name="view" method="view" class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">view</param>
+      			</interceptor-ref>		   					
+			<result  name="prepare" >../Administrator/ViewStudent.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="show" method="show" class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>	
+		<action name="delete" method="deleteStudent" class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">deleteStudent</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="success" type="redirect">view.html</result>
+		</action>
+		<action name="search" method="search" class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">search</param>
+       		</interceptor-ref>
+       		<result name="prepare">../Administrator/ViewStudent.jsp</result>
+		</action>
+		<action name="saveStudent" method="saveStudent"  class="com.cce.web.administrator.AdmStudentAction">							
+			<result name="input">../Administrator/AddStudent.jsp</result>
+			<result name="error" >../Administrator/AddStudent.jsp</result>						   				
+			<result  name="success" >../Administrator/AddStudentFamily.jsp</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="addFamily"   class="com.cce.web.CommonAction">		   					
+			<result  name="success" >../Administrator/AddStudentFamily.jsp</result>
+		</action>
+		<action name="saveFamily" method="saveFamilyDetails"  class="com.cce.web.administrator.AdmFamilyAction">							
+			<result name="input">../Administrator/AddStudentFamily.jsp</result>
+			<result name="error" >../Administrator/AddStudentFamily.jsp</result>						   				
+			<result  name="success" type="chain">addStudent</result>
+			<result name="update" type="redirect">view.html</result>
+		</action>
+		<action name="familyEdit" method="familyEdit" class="com.cce.web.administrator.AdmFamilyAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">familyEdit</param>
+       		</interceptor-ref>
+			<result name="prepare">../Administrator/AddStudentFamily.jsp</result>
+		</action>
+		<action name="familyView" method="show" class="com.cce.web.administrator.AdmFamilyAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">show</param>
+       		</interceptor-ref>
+       		<result name="prepare" >/Common/CommonShowDetails.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="com.cce.web.administrator.AdmStudentAction">
+			<interceptor-ref name="defaultStack">
+           		<param name="validation.excludeMethods">edit</param>
+       		</interceptor-ref> 					        	       							       
+			<result name="prepare" >../Administrator/AddStudent.jsp</result>
+		</action>
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>	
+		<action name="revert" class="com.cce.web.ProjectSupport">
+			<result name="" type="redirect">view.html</result>
+		</action>		   				
+	</package>				
+ </struts>

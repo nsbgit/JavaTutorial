@@ -1,0 +1,34 @@
+package first;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+
+class UserLoginGUI1 extends JFrame implements ActionListener
+{
+	public UserLoginGUI1()
+	{
+		super("Login in as an user");
+	}
+
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent arg0)
+	{
+		
+	}
+}
+
+public class UserLoginFrame1
+{
+	public static void main(String[] args)
+	{
+		new UserLoginFrame1();
+
+	}
+
+}

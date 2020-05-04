@@ -1,0 +1,23 @@
+package test;
+
+public class Factorial {
+	private int result;
+	private int value;
+	
+	// this is an constructor
+	Factorial() {
+		result = 1;
+		value = 5;
+	}
+	
+	// these are the methods
+	void calculation() {
+		for(int i = 1; i<= value; i++) {
+			result = result * i;
+		}
+	}
+	
+	void display() {
+		System.out.println("Factorial of " + value + "is : " + result);
+	}
+}

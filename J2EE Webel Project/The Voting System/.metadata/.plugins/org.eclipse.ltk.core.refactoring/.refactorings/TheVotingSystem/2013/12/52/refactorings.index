@@ -1,0 +1,19 @@
+1388246485724	Rename resource 'commonPage'
+1388254888687	Rename type 'Adminregistrationinformation'
+1388255800485	Encapsulate field 'eMail'
+1388259244632	Delete element
+1388260668032	Convert local variable 'connection' to field
+1388261691977	Convert local variable 'session' to field
+1388349328165	Convert local variable 'adminRegistrationInformation' to field
+1388350028832	Convert local variable 'flagSignInInfo' to field
+1388350099073	Convert local variable 'connection' to field
+1388350123912	Convert local variable 'sql' to field
+1388350759367	Convert local variable 'preparedStatement' to field
+1388350968098	Convert local variable 'resultSet' to field
+1388351202935	Convert local variable 'connection' to field
+1388351335423	Convert local variable 'resultSet' to field
+1388351434996	Convert local variable 'arrayList' to field
+1388353313414	Convert local variable 'session' to field
+1388355420064	Convert local variable 'passwordPattern' to field
+1388355476879	Convert local variable 'scanPassword' to field
+1388355718135	Convert local variable 'matched' to field

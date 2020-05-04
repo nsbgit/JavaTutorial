@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<addCategory
+		id="category_1372268714774"
+		name="Custom"
+		description="Container for custom components"
+		visible="true"
+		open="true"/>
+	<addComponent
+		id="custom_1372268714774"
+		name="JButton"
+		description="Creates javax.swing.JButton component."
+		visible="true"
+		class="javax.swing.JButton"
+		category="category_1372268714774"/>
+	<moveEntry
+		id="org.eclipse.wb.swing.containers javax.swing.JInternalFrame"
+		category="org.eclipse.wb.swing.containers"
+		nextEntry="org.eclipse.wb.swing.containers javax.swing.JDesktopPane"/>
+</commands>

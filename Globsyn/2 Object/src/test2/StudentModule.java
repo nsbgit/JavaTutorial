@@ -1,0 +1,35 @@
+package test2;
+
+import java.util.Scanner;
+
+public class StudentModule {
+	private StudentData stdObj = new StudentData();
+	
+	Scanner sc = new Scanner(System.in);
+	
+	void studentInformationInput() {
+		System.out.println("Enter student name:");
+		stdObj.setStudentName(sc.nextLine());
+		
+		System.out.println("Enter marks of Math:");
+		stdObj.setMath(sc.nextInt());
+		
+		System.out.println("Enter marks of Phycisc");
+		stdObj.setPhy(sc.nextInt());
+		
+		System.out.println("Enter marks of Biology");
+		stdObj.setBio(sc.nextInt());
+	}
+	
+	void marksCalculation() {
+		stdObj.setTotal(stdObj.getBio() + stdObj.getMath() + stdObj.getPhy());
+	}
+	
+	void display() {
+		System.out.println("Name	:	" + stdObj.getStudentName());
+		System.out.println("Maths	:	" + stdObj.getMath());
+		System.out.println("Physics	:	" + stdObj.getPhy());
+		System.out.println("Biology	:	" + stdObj.getBio());
+		System.out.println("Total	:	" + stdObj.getTotal());
+	}
+}

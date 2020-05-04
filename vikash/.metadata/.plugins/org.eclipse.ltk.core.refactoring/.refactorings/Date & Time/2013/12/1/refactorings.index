@@ -1,0 +1,12 @@
+1388415570923	Convert local variable 'calDate' to field
+1388415740356	Convert local variable 'calMonth' to field
+1388415793159	Convert local variable 'calYear' to field
+1388415890123	Convert local variable 'sysDate' to field
+1388415918109	Convert local variable 'calendar' to field
+1388416091780	Convert local variable 'calHour' to field
+1388416235914	Convert local variable 'calMin' to field
+1388416271010	Convert local variable 'calSec' to field
+1388416334951	Convert local variable 'sysTime' to field
+1388416792923	Convert local variable 'calDay' to field
+1388417182713	Convert local variable 'sysDay' to field
+1388417886530	Convert local variable 'calAmPm' to field

@@ -1,0 +1,87 @@
+package test;
+
+import java.util.Scanner;
+
+public class Create_Account
+{
+	Scanner s =new Scanner(System.in);
+	int n;
+	void get_AccNo(int n)
+	{
+		this.n=n;
+		//System.out.println("hehe " + this.n);
+	}
+	
+	public int getN()
+	{
+		return n;
+	}
+	Account A[]=new Account[n];
+	
+	
+	Create_Account(){}
+	
+	Create_Account(int n)
+	{
+		//System.out.println("hehe " + n);
+		for(int i=0;i<=n-1;i++)
+		{
+			//System.out.println("n  " + n);
+			//System.out.println("i " + i);
+			System.out.println("Enter Account holder's name:  ");
+			String name = s.next();
+			//System.out.println("i2 " + i);
+			A[i].Account1(name);
+		}
+	}
+	void account_Deposit(int a)
+	{
+		boolean flag=false;
+		for(int i=0;i<A.length;i++)
+		{
+			if(a==A[i].get_Accountnumber())
+			{
+				System.out.println("Enter the amount you want to deposit:  ");
+				double amt=s.nextDouble();
+				A[i].deposit(amt);
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false)
+			System.out.println("Account does not Exist"); 						
+	}
+	void account_Withdraw(int a)
+	{
+		boolean flag=false;
+		for(int i=0;i<A.length;i++)
+		{
+			if(a==A[i].get_Accountnumber())
+			{
+				System.out.println("Enter the amount you want to deposit:  ");
+				double amt=s.nextDouble();
+				A[i].withdrawal(amt);
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false)
+			System.out.println("Account does not Exist"); 						
+	}
+	void balance_Display(int a)
+	{
+		boolean flag=false;
+		for(int i=0;i<A.length;i++)
+		{
+			if(a==A[i].get_Accountnumber())
+			{
+				A[i].show();
+				flag=true;
+				break;
+			}
+		}
+		if(flag==false)
+			System.out.println("Account does not Exist");
+	}
+
+}

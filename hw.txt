@@ -1,0 +1,7 @@
+create a base class called vehicle that stores num,ber of wheels and speed
+create the following derieved class:
+car that inerit vehicxl n also stors no of psngrs 
+truck dat inherit vehcl
+and also stor sm lod limit
+rite a main func to create objts of these clses n disp all d info about
+car n truck and also cmpare the speed of 2 vehicles.

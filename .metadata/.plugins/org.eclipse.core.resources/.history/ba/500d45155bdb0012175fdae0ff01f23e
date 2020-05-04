@@ -1,0 +1,61 @@
+package test;
+
+interface I1
+{
+	void f1();
+	void f2();//function declaration only
+}
+
+
+class A7
+{}
+
+
+class A6 implements I1//attach interface
+{
+	
+	/* Over riding of all function body of interface
+	 * and make the function public
+	 * */
+	public void f1()//make over riding with public access specifier
+	{
+		System.out.println("F1");
+	}
+	
+	public void f2()//make over riding with public access specifier
+	{
+		System.out.println("F2");
+	}
+	
+	void f3()//Separated function
+	{
+		System.out.println("F3");
+	}
+}
+
+public class InterfaceDemo
+{
+
+	public static void main(String[] args)
+	{
+		/* By using class object we can access all interface function as well as own class function
+		 * */
+		A6 ob1 = new A6();
+		ob1.f1();
+		ob1.f2();
+		ob1.f3();
+		
+		A7 ob2 = new A7();
+		
+		I1 ref;
+		ref = ob1;//implements a6 class object ob1
+		//ref = ob2;
+		/* By using interface reference
+		 * we can use only over riding function in class a6
+		 * */
+		ref.f1();
+		ref.f2();
+		//ref.f3();
+	}
+
+}

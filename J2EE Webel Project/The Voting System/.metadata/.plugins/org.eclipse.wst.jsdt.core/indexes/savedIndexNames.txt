@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+D:\WORK & OTHER\Works\Sukanta Sharma\Dropbox\Java Program on Dropbox\J2EE Webel Project\The Voting System\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+500510752.index
+685968379.index
+2655572666.index
+754715913.index
+3223769865.index

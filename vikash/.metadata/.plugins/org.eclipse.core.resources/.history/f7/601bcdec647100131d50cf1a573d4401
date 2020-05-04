@@ -1,0 +1,36 @@
+package test;
+
+import java.util.Calendar;
+
+public class FetchSystemDateAndTime {
+
+	private static String calDate;
+	private static String calMonth;
+	private static String calYear;
+	private static String sysDate;
+	private static Calendar calendar;
+	private static String calHour;
+	private static String calMin;
+	private static String calSec;
+	private static String sysTime;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		calendar = Calendar.getInstance();
+		
+		calDate = "" + calendar.get(Calendar.DATE);
+		calMonth = "" + (calendar.get(Calendar.MONTH));
+		calYear = "" + calendar.get(Calendar.YEAR);
+		sysDate = calDate + "/" + calMonth + "/" + calYear;
+		
+		calHour = "" + calendar.get(Calendar.HOUR_OF_DAY);
+		calMin = "" + calendar.get(Calendar.MINUTE);
+		calSec = "" + calendar.get(Calendar.SECOND);
+		sysTime = calHour + ":" + calMin + ":" + calSec;
+	}
+
+}

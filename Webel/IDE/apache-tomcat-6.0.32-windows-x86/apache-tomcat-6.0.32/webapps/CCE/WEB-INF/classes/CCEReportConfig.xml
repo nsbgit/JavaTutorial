@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+   <!-- **************** Scholastic Marks Form ******************* --> 	
+	<package  name="schoMarksForm" namespace="/SchoMarksForm" extends="struts-default">											
+								
+		<action name="schoMarks" method="prepareForMarks"  class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForMarks</param>
+      			</interceptor-ref>      			   				
+			<result  name="prepare" >../Report/ScholasticMarksForm.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="standardBind" method="prepareStandard" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">prepareStandard</param>
+        	</interceptor-ref>
+		</action>
+		<action name="subjectBind" method="prepareSubject" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">prepareSubject</param>
+        	</interceptor-ref>
+		</action>
+		<action name="examNameBind" method="prepareExamName" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">prepareExamName</param>
+        	</interceptor-ref>
+		</action>
+		
+		
+		
+		<action name="marksForm" method="marksForm" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">marksForm</param>
+      		</interceptor-ref>     						
+        	<result  name="prepare" >../Report/ScholasticMarksFormDetails.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+	</package>
+	
+	<!-- **************** Co-Scholastic Marks Form ******************* -->
+	<package  name="coSchoMarksForm" namespace="/CoSchoMarksForm" extends="struts-default">									
+		<action name="coschoForm" method="prepare"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>      			   				
+			<result  name="prepare" >../Report/CoScholasticMarksForm.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="getArea" method="standardMatrixByArea"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		<action name="getSubArea" method="subAreaByArea"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>						
+		<action name="marksEntryForm" method="marksFormReport" class="com.cce.web.cceoperator.CoScholasticMarksAction">					
+        	<result  name="prepare" >../Report/CoScholasticMarksEntry.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>		
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>		
+	</package>	
+	
+	 <!-- **************** Scholastic Marks Report ******************* --> 	
+	<package  name="scholasticMarksReport" namespace="/Scholastic" extends="struts-default">									
+		<action name="marksReport" method="prepareForMarks"  class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForMarks</param>
+      			</interceptor-ref>
+      			   					
+			<result  name="prepare" >../Report/ScholasticMarksReport.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="subjectBind" method="prepareSubject" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">prepareSubject</param>
+        	</interceptor-ref>
+		</action>
+				
+		<action name="report" method="marksReport" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">marksReport</param>
+        	</interceptor-ref>						
+        	<result  name="prepare" >../Report/ScholasticMarksReportDetails.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>	
+		<action name="trc" method="marksReport" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">marksReport</param>
+        	</interceptor-ref>						
+        	<result  name="prepare" >../Report/teacherRecordCard.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>		
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+			
+	</package>
+	
+	
+	
+	<!-- **************** Co-Scholastic Marks Report ******************* -->
+	<package  name="coSchoMarksReport" namespace="/CoSchoMarksReport" extends="struts-default">									
+		<action name="coschoMarkReport" method="prepare"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepare</param>
+      			</interceptor-ref>      			   				
+			<result  name="prepare" >../Report/coschoMarksReport.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>
+		<action name="getArea" method="standardMatrixByArea"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">standardMatrixByArea</param>
+      			</interceptor-ref>			   								
+		</action>
+		<!-- 
+		<action name="getSubArea" method="subAreaByArea"  class="com.cce.web.cceoperator.CoScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForAreas</param>
+      			</interceptor-ref>			   								
+		</action>
+		 -->						
+		<action name="marksEntryReport" method="coSchomarksDetailsReport" class="com.cce.web.cceoperator.CoScholasticMarksAction">
+		<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">coSchomarksDetailsReport</param>
+      			</interceptor-ref>      					
+        	<result  name="prepare" >../Report/coschoMarksDetails.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>		
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>		
+	</package>	
+	
+	<!-- **************** Student Profile ******************* --> 	
+	<package  name="studentProfile" namespace="/Student" extends="struts-default">									
+		<action name="student" method="prepareForMarks"  class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForMarks</param>
+      			</interceptor-ref>      			   					
+			<result  name="prepare" >../Report/StudentProfile.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>						
+		<action name="profile" method="studentProfile" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">studentProfile</param>
+        	</interceptor-ref>						
+        	<result  name="prepare" >../Report/StudentProfileReport.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>	
+		<action name="SchoOverallMarks" method="schoOverAllMarks" class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">schoOverAllMarks</param>
+        	</interceptor-ref>						
+        	<result  name="prepare" >../Report/OverAllSchoMarks.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>				
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>
+			
+	</package>	
+	
+	
+	<!-- **************** Report Card ******************* --> 	
+	<package  name="reportCard" namespace="/ReportCard" extends="struts-default">									
+		<action name="reportCard" method="prepareForMarks"  class="com.cce.web.cceoperator.ScholasticMarksAction">
+			<interceptor-ref name="defaultStack">
+          			<param name="validation.excludeMethods">prepareForMarks</param>
+      			</interceptor-ref>      			   					
+			<result  name="prepare" >../ReportCard/ReportCard.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>				
+		<action name="report" method="genrateReportCard" class="com.cce.web.report.ReportCardAction">
+			<interceptor-ref name="defaultStack">
+            	<param name="validation.excludeMethods">genrateReportCard</param>
+        	</interceptor-ref>						
+        	<result  name="prepare" >../ReportCard/Report.jsp</result>
+			<result name="accessDeny">/Common/AccessDeny.jsp</result>
+		</action>										
+		<action name="CLOSE" class="com.cce.web.ProjectSupport">
+			<result name="success" type="redirect">../Common/home.html</result>
+		</action>		
+	</package>					
+ </struts>

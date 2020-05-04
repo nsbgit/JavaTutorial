@@ -1,0 +1,23 @@
+package sir;
+
+public class Car extends Vehicle
+{
+	private int pass;
+    
+    void setdata() throws Exception
+    {
+       System.out.println("Enter car information");
+       super.setdata();
+
+       System.out.println("Enter The max no. of passengers::\n");
+   pass = Integer.parseInt(br.readLine());
+    }
+
+    void disp()
+    {
+       System.out.println("CAR INFORMATION IS....");
+       super.disp();
+        System.out.println("No of Passenger is  "+pass);
+    }
+
+}

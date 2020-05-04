@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;ArrayListStudent&apos;&#x0D;&#x0A;- Original project: &apos;ArrayListStudent&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Main (Shanu-PC&apos;s conflicted copy 2013-06-26).java&#x0D;&#x0A;     StudentData (Shanu-PC&apos;s conflicted copy 2013-06-26).java&#x0D;&#x0A;     StudentModule (Shanu-PC&apos;s conflicted copy 2013-06-26).java" description="Delete elements" element1="src/test/StudentData (Shanu-PC&apos;s conflicted copy 2013-06-26).java" element2="src/test/Main (Shanu-PC&apos;s conflicted copy 2013-06-26).java" element3="src/test/StudentModule (Shanu-PC&apos;s conflicted copy 2013-06-26).java" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1372742286661" subPackages="false" version="1.0"/>
+</session>

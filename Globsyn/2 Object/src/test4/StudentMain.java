@@ -1,0 +1,18 @@
+package test4;
+
+public class StudentMain {
+	public static void main(String[] args) {
+		StudentModule obj = new StudentModule();
+		
+		obj.inputStudentNumber();
+		obj.studentArrayCreation();
+		obj.studentObjectCreation();
+		obj.studentInformationInput();
+		obj.marksCalculation();
+		obj.display();
+		obj.printArrayLength();
+		obj.highestSearch();
+		obj.highestDisplay();
+	}
+
+}

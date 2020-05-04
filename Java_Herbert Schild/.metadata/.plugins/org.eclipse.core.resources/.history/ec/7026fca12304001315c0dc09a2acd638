@@ -1,0 +1,60 @@
+package test;
+
+import java.util.Scanner;
+
+public class Account_Demo
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Scanner S=new Scanner(System.in);
+		Create_Account Create=new Create_Account(); 		
+		while(true)
+		{
+			System.out.println("*************WELCOME TO XYZ BANK*************");
+			System.out.println("Press 1 to Create Account");
+			System.out.println("Press 2 to Deposit Amount");
+			System.out.println("Press 3 to Withdraw Amount");
+			System.out.println("Press 4 to Get the available balance");
+			System.out.println("Press 5 to Exit");
+			System.out.println("Enter Your Choice:  ");
+			int c=S.nextInt();
+			switch(c)
+			{
+				case 1:
+					System.out.println("Enter number of accounts you want to create:  ");
+					int n=S.nextInt();
+					Create.get_AccNo(n);
+					Create_Account Create1=new Create_Account(n);
+					break;
+				case 2:
+					System.out.println("Enter the account number in which you want to deposit:  ");
+					int a=S.nextInt();
+					Create.account_Deposit(a);
+					break;
+				case 3:
+					System.out.println("Enter the account number from which you want to withdraw:  ");
+					int a1=S.nextInt();
+					Create.account_Withdraw(a1);
+					break;
+				case 4:
+					System.out.println("Enter the account number of which you want to see balance  ");
+					int a2=S.nextInt();
+					Create.balance_Display(a2);
+					break;
+				case 5:
+					System.exit(0);
+				default:
+					System.out.println("Invalid Choice");
+					break;
+					
+			}
+		}
+
+	}
+
+}

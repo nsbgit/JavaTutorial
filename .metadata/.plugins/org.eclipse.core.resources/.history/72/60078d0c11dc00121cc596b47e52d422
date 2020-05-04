@@ -1,0 +1,46 @@
+package test;
+
+class Excep extends Exception
+{
+	/* To create user defined exception instead of system
+	 * defined we should create class which must be a child of Exception class
+	 * */
+	private String s;
+	
+	Excep(String s1)
+	{
+		s = s1;
+	}
+	
+	String info()
+	{
+		return s;
+	}
+	
+class AB
+{
+	void f1() throws Excep
+	{
+		throw new Excep("User Defined ");
+	}
+}
+	
+	}
+
+public class EcpetionMain {
+
+
+	public static void main(String[] args) 
+	{
+		try
+		{
+			throw new Excep("User Defined ");
+			
+		}catch(Excep e) 
+		{
+			System.out.println(e.info());
+		}
+
+	}
+
+}

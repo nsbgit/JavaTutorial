@@ -1,0 +1,41 @@
+1388597095018	Move 1 resources to 'images'
+1388597210508	Move 'c1.gif' to 'images'
+1388598612817	Convert local variable 'link' to field
+1388599106496	Convert local variable 'adminRegistrationInformation' to field
+1388599777886	Delete elements
+1388607241939	Convert local variable 'adminSignInHistory' to field
+1388610385126	Encapsulate field 'signInDay'
+1388610423059	Encapsulate field 'signOutDay'
+1388610820581	Delete element
+1388610940076	Convert local variable 'connection' to field
+1388611212266	Convert local variable 'preparedStatement' to field
+1388611635066	Convert local variable 'databaseUpdateChecker' to field
+1388611791174	Encapsulate field 'session2'
+1388669726592	Move 1 resources to 'adminSection'
+1388669732444	Delete element
+1388673814310	Convert local variable 'sql' to field
+1388674045886	Convert local variable 'arrayList' to field
+1388674995631	Convert local variable 'data' to field
+1388679485068	Convert local variable 'flagSignInfo' to field
+1388684258736	Rename resource 'editProfile.jsp'
+1388774714227	Convert local variable 'date' to field
+1388774851624	Convert local variable 'simpleDateFormat' to field
+1388774938371	Convert local variable 'filePreName' to field
+1388775187079	Convert local variable 'fileItemFactory' to field
+1388775283662	Convert local variable 'servletFileUpload' to field
+1388775610541	Convert local variable 'itemsList' to field
+1388775692584	Convert local variable 'fileName' to field
+1388775818278	Convert local variable 'isMultipart' to field
+1388777628336	Convert local variable 'iterator' to field
+1388777900257	Convert local variable 'item' to field
+1388781091111	Convert local variable 'arrayList' to field
+1388781369015	Convert local variable 'itemName' to field
+1388781399972	Convert local variable 'regx' to field
+1388781511558	Convert local variable 'pattern' to field
+1388781576184	Convert local variable 'matcher' to field
+1388781671218	Convert local variable 'stringBuffer' to field
+1388781856784	Convert local variable 'indexOf' to field
+1388781906728	Convert local variable 'domainName' to field
+1388781957174	Convert local variable 'filePath' to field
+1388782263331	Convert local variable 'savedFile' to field
+1388782774318	Convert local variable 'adminRegistrationInformation' to field

@@ -1,0 +1,111 @@
+package test;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class ChangePassword extends JFrame implements ActionListener
+{
+	private JLabel lHeading,lFirstName,lCurrentPassword,lNewPassword;
+	private JTextField tFirstName;
+	private JPasswordField pCurrentPassword,pNewPassword;
+	private JButton bBack,bChange;
+	ArrayList<OperatorReg> list;
+	
+	public ChangePassword()
+	{
+		super("Change Password");
+		
+		Container c=getContentPane();
+		c.setLayout(new GridLayout(7,2));
+		
+		Font f1=new Font("Chiller",Font.BOLD,28);
+		Font f2=new Font("Times New Roman",Font.BOLD,20);
+		
+		
+		lHeading=new JLabel("CHANGE PASSWORD");
+		lHeading.setFont(f1);
+		lHeading.setForeground(Color.RED);
+		JPanel apanel=new JPanel();
+		apanel.add(lHeading);
+		apanel.setBackground(new Color(0,0,64));
+		
+		lFirstName=new JLabel("Enter First Name");
+		lFirstName.setFont(f2);
+		lFirstName.setForeground(Color.GRAY);
+		JPanel bpanel=new JPanel();
+		bpanel.add(lFirstName);
+		bpanel.setBackground(new Color(0,0,64));
+		
+		
+		lCurrentPassword=new JLabel("Enter Current Password");
+		lCurrentPassword.setFont(f2);
+		lCurrentPassword.setForeground(Color.GRAY);
+		JPanel cpanel=new JPanel();
+		cpanel.add(lCurrentPassword);
+		cpanel.setBackground(new Color(0,0,64));
+		
+		lNewPassword=new JLabel("ENTER AMOUNT:");
+		lNewPassword.setFont(f2);
+		lNewPassword.setForeground(Color.GRAY);
+		JPanel dpanel=new JPanel();
+		dpanel.add(lNewPassword);
+		dpanel.setBackground(new Color(0,0,64));
+		
+		
+		tFirstName=new JTextField();
+		pCurrentPassword=new JPasswordField();
+		pNewPassword=new JPasswordField();
+		
+		
+		bChange=new JButton("Change");
+		bChange.addActionListener(this);
+		JPanel epanel=new JPanel();
+		epanel.add(bChange);
+		epanel.setBackground(new Color(0,0,64));
+		
+		bBack=new JButton("Back");
+		bBack.addActionListener(this);
+		JPanel fpanel=new JPanel();
+		fpanel.add(bBack);
+		fpanel.setBackground(new Color(0,0,64));
+		
+		
+		c.add(lHeading);		c.add(new JLabel(""));
+		c.add(new JLabel(""));	c.add(new JLabel(""));
+		c.add(lFirstName);		c.add(tFirstName);
+		c.add(lCurrentPassword);c.add(pCurrentPassword);
+		c.add(lNewPassword);	c.add(pNewPassword);
+		c.add(new JLabel(""));	c.add(new JLabel(""));
+		c.add(epanel);			c.add(fpanel);
+		
+		
+		setSize(500,500);
+		setLocation(100,100);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+	}
+	
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

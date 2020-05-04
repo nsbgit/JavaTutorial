@@ -1,0 +1,57 @@
+Class Palindrome
+
+{
+
+ public static void main(String args[])
+
+ {
+
+  String s="malayalam";
+
+  int i;
+
+  int n=s.length();
+
+  String str="";
+
+  for(i=n-1;i>=0;i--)
+
+  str=str+s.charAt(i);
+
+  if(str.equals(s))
+
+  System.out.println(s+ "is palindrome");
+
+  else
+
+  System.out.println(s+ "is not a palindrome");
+
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+class palindrome
+{
+	public static void main(String[] args)
+	{
+		StringBuffer s1=new StringBuffer(args[0]);
+		StringBuffer s2=new StringBuffer(s1);
+		s1.reverse();
+		System.out.println(“Given String is:”+s2);
+		System.out.println(“Reverse String is”+s1);
+		if(String.valueOf(s1).compareTo(String.valueOf(s2))==0)
+			System.out.println(“Palindrome”);
+		else
+			System.out.println(“Not Palindrome”);
+	}
+}

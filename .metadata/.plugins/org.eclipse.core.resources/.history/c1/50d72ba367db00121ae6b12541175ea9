@@ -1,0 +1,33 @@
+package test;
+
+class A15
+{
+	enum city {Kol,Delhi}
+	/* enum is a user defined data type
+	 * city is a enum variable name
+	 * Kol, Delhi is value
+	 * */
+	
+	void f1()
+	{
+		city c = city.Kol;
+		System.out.println(c);
+		System.out.println(city.Delhi);
+		/* city is enum variable name
+		 * c is a variable name is of city type variable
+		 * We have to write code as above to assign value in c
+		 * */
+	}
+}
+
+
+public class EnumExample
+{
+	public static void main(String[] args)
+	{
+		A15 ob1 = new A15();
+		ob1.f1();
+
+	}
+
+}

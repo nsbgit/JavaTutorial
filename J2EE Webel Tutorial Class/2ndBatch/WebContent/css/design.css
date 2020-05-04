@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+.pageHeader {
+	background-color: whtie;
+	color: #833059;
+	font-family: inherit;
+	box-shadow: 10px 10px 15px #ddcef0;
+}
+
+.header{
+	background-color: #a768f2;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: bold
+}
+
+LABEL{
+	color: #a768f2;
+	font-weight: bold;
+	font-family: cursive;
+	padding-left: 30px
+}
+
+.box{
+box-shadow: 10px 10px 15px #ddcef0;
+background-color: white;
+}
+
+.body{
+	background-color: #F8FACA;
+	width: 600px;
+	height: 750px;
+	margin: 0 auto;
+	border-bottom-style: inset;
+	border-right-style: inset;
+}
+
+.btn{
+	background-color: #a768f2;
+	color: white;
+	font-weight: bold;
+}
+
+.recordsBody {
+	background-color: #F8FACA;
+	width: 1400px;
+	height: 750px;
+	margin: 0 auto;
+	border-bottom-style: inset;
+	border-right-style: inset;
+}
+
+em {
+	color: red;
+			font-family: cursive;
+}

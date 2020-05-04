@@ -1,0 +1,18 @@
+package yoyo;
+
+import java.util.Random;
+
+public class RandomPasswordGenerator {
+	
+	public static String createString() {
+		
+		String alphabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		
+		
+		char[] alphabet = alphabetString.toCharArray();
+		
+		
+		return null;
+		
+	}
+}

@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	.hd {
+		background-color: #5E610B;
+		color: white;
+		font-size:  26px;
+		font-weight: bold;
+	}
+	.lbl {
+		font-weight: bold; color: #5E610B; padding-left: 25px;
+	}
+	.tab {
+		border: 2px solid yellow;
+	}
+</style>
+</head>
+<body>
+	<table width="500px" align="center" class="tab">
+		<tr>
+			<td align="center" colspan="2" class="hd"> REGISTRATION  </td>
+		</tr>	
+		<tr>
+			<td width="50%" class="lbl">Name<font color="red">*</font> </td>
+			<td>
+				<input type="text" name="sName" id="sName" style="width: 100%">
+			</td> 
+		</tr>
+		<tr>
+			<td width="50%" class="lbl">Address<font color="red">*</font> </td>
+			<td>
+				<textarea rows="4" cols="20" name="add" id="add"  style="width: 100%"></textarea>
+			</td> 
+		</tr>
+		<tr>
+			<td width="50%" class="lbl">Stream <font color="red">*</font> </td>
+			<td>
+				<select name="stream" id="stream"  style="width: 100%">
+					<option value="">------Select One------</option>
+					<option value="cse">Computer Science</option>
+					<option value="It">Information Technology</option>
+					<option value="mca">MCA</option>
+				</select>
+			</td> 
+		</tr>
+		<tr>
+			<td width="50%" class="lbl">Gender <font color="red">*</font> </td>
+			<td>
+				<input type="radio" name="gen" value="m"> Male
+				<input type="radio" name="gen" value="f"> Female
+			</td> 
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" value="Save">
+				<input type="reset" value="Reset">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

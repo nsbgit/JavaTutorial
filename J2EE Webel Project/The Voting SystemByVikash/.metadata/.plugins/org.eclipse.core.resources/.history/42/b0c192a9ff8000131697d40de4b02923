@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Information</title>
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<link rel="stylesheet" href="css/contact1.css" type="text/css" />
+
+</head>
+<body class="body">
+
+	
+<div id="container">
+				<header id="page_header">
+				<img src="../logo/download.jpg" alt="logo" width='232' height='100' class="logo" />
+					<h1 class="head_text">WELCOME TO ONLINE VOTING</h1>
+				</header>
+				</div>
+				
+<div id="container">
+  		<div id="header">
+    
+  		</div>
+  			<div id="menuBar"><div id='cssmenu'>
+				<ul>
+   					<li class='active'><a href='#'><span>Home</span></a></li>
+   					<li><a href='#'><span>Gallery</span></a></li>
+   					<li class='has-sub'><a href='#'><span>Registration</span></a>
+     			<ul>
+         			<li><a href='../mainToAdminSection/adminSignUp.jsp'><span>Organisation Registration</span></a></li>
+         			<li class='last'><a href='../mainToVoterSection/voterSignUp.jsp'><span>Voter Registration</span></a></li>
+      			</ul>
+   			</li>
+   				<li class='has-sub'><a href='#'><span>Log in</span></a>
+      		<ul>
+         		<li><a href='../mainToAdminSection/adminSignIn.jsp'><span>Admin Login</span></a></li>
+         		<li class='last'><a href='../mainToVoterSection/voterSignIn.jsp'><span>Voter Login</span></a></li>
+      		</ul>
+   		</li>
+   				<li><a href='../contactUs.jsp'><span>Contact Us</span></a></li>
+   				<li class='last'><a href='#'><span>About Us</span></a></li>
+		</ul>
+	</div></div>
+  		<div id="leftSideBar">Content for  id "leftSideBar" Goes Here</div>
+  		<div id="content" style="color: #FFF;font-size: 32px;padding-left: 140px;padding-top: 20px;">
+		<%-- Paste div clas body here --%>
+		
+  		
+  		
+  			
+  			Contact Infotromation For Online Voting
+  			Sukanta Sharma<br>
+  			Chief Executive Officer of Admin<br>
+  			email : sukanta@gmail.com<br>
+  			Contact : +91-9874854854<br>
+  			<br>
+  			Vikash Singh<br>
+  			Managing Director of Voter<br>
+  			email : vikash@gmail.com<br>
+  			Contact : +91-8074854854<br>
+  			<br>
+  			Abhijeet Shaw<br>
+  			Senior Software Developer of Project<br>
+  			email : abhijeet@gmail.com<br>
+  			Contact : +91-8074800854<br>
+  			<br>
+  			Arbind Kumar Mahato<br>
+  			Senior Product Desiner<br>
+  			email : arbind@gmail.com<br>
+  			Contact : +91-8074800854<br>
+  			<br>
+  			Office Address : Block A, Phase III,<br>
+  			PO. Kalyani, Dist. Nadia - 741235,<br>
+			W.B.<br>
+  			Contact : i. 033 2582 2138 <br>
+					  Ii. 033 2580 8640 <br>
+  			email : VotingProject@ibsolution.in<br>
+  
+  
+  		</div>
+  		
+  		
+  		
+  		</div>
+  		<div id="footer"><p align="center">Online Voting Portal<br />
+  		all copyrights are reserved&copy;
+  		</p></div>
+
+</div>
+
+  	 		
+</body>
+</html>

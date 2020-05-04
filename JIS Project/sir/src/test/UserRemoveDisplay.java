@@ -1,0 +1,57 @@
+package test;
+import java.io.*;
+import java.util.ArrayList;
+import javax.swing.*;
+public class UserRemoveDisplay extends JFrame {
+	ArrayList<Actotal>list1;
+	ArrayList<Create> list2;
+	int p;
+	public UserRemoveDisplay(String name) {
+		p=Integer.parseInt(name);
+		try {
+			FileInputStream fin=new FileInputStream("Regis.dat");
+			ObjectInputStream oin=new ObjectInputStream(fin);
+			list2=(ArrayList<Create>)oin.readObject();
+		}catch(Exception e) {
+			list2 = new ArrayList<Create>();
+		}
+		int r=0,c=0;
+		for(int i=0;i<list2.size();i++) {
+			if(list2.get(i).getAc().equals(name)) {
+				r++;
+				String r1=String.valueOf(r);
+				list2.remove(i);
+			}
+		}
+		try	 {
+			FileOutputStream fout=new FileOutputStream("Regis.dat");
+			ObjectOutputStream oout=new ObjectOutputStream(fout);
+			oout.writeObject(list2);
+		}catch(Exception e){}
+		try {
+			FileInputStream fin=new FileInputStream("actotal.dat");
+			ObjectInputStream oin=new ObjectInputStream(fin);
+			list1=(ArrayList<Actotal>)oin.readObject();
+		}catch(Exception e) {
+			list1 = new ArrayList<Actotal>();
+		}
+		for(int i=0;i<list1.size();) {
+			if(list1.get(i).getAccount()==p) {
+				c++;
+				String c1=String.valueOf(c);
+				list1.remove(i);
+			}
+			else
+				i++;
+		}
+		try	 {
+			FileOutputStream fout=new FileOutputStream("actotal.dat");
+			ObjectOutputStream oout=new ObjectOutputStream(fout);
+			oout.writeObject(list1);
+		}catch(Exception e){}
+		if(r==1)
+			JOptionPane.showMessageDialog(this, "USER RECORD REMOVED");
+		else
+			JOptionPane.showMessageDialog(this, "No Data Found");
+	}
+}

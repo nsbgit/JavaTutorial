@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.wst.server.ui,1.1.102.v20090515,"org.eclipse.wst.server.launchShortcut.run",1387185029278
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1387185029449
+started,bundle,org.eclipse.jdt.debug.ui,3.4.0.v20090527,"org.eclipse.jdt.debug.ui",1387185030120
+opened,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1387185030229
+started,bundle,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser",1387185032164
+opened,editor,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser.editor",1387185032491
+activated,editor,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser.editor",1387185032523
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1387185036472
+started,bundle,org.eclipse.wst.html.core,1.1.300.v200903120608,"org.eclipse.wst.html.core",1387185040029
+started,bundle,org.eclipse.wst.css.core,1.1.300.v200904131653,"org.eclipse.wst.css.core",1387185040060
+started,bundle,org.eclipse.wst.jsdt.web.ui,1.0.200.v200904230847,"org.eclipse.wst.jsdt.web.ui",1387185040075
+started,bundle,org.eclipse.wst.css.ui,1.0.400.v200904292008,"org.eclipse.wst.css.ui",1387185040075
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185040200
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185095877
+started,bundle,org.eclipse.wst.jsdt.web.support.jsp,1.0.200.v200904140255,"org.eclipse.wst.jsdt.web.support.jsp",1387185095939
+opened,editor,org.eclipse.jst.jsp.ui,1.1.400.v200904292008,"org.eclipse.jst.jsp.core.jspsource.source",1387185096017
+activated,editor,org.eclipse.jst.jsp.ui,1.1.400.v200904292008,"org.eclipse.jst.jsp.core.jspsource.source",1387185096064
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1387185173159
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185175265
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185176529
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185176716
+error,log,,,"File not found: '/2ndBatch/src/__2F_2ndBatch_2F_WebContent_2F_1st_2E_jsp.java'",1387185176810
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1387185178385
+executed,command,org.eclipse.wst.server.ui,1.1.102.v20090515,"org.eclipse.wst.server.launchShortcut.run",1387185178416
+opened,editor,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser.editor",1387185178479

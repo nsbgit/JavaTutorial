@@ -1,0 +1,3 @@
+develope a java prog to creatre stack which will have four diff funtions i.e push,pop. empty, full.
+the operation push will throw an exception if the stack is full. likewise, the opertaion pop will throw an exception if thhe stack is empty . develop the exceptions . from your main program use try block and catch clauses to handle this exception.
+

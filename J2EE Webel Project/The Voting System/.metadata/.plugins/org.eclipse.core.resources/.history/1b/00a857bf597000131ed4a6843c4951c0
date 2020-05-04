@@ -1,0 +1,75 @@
+package controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import logic.LAdminRegistration;
+
+import dto.AdminRegistrationInformation;
+
+/**
+ * Servlet implementation class SAdminRegistration
+ */
+public class SAdminRegistration extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private HttpSession session;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SAdminRegistration() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.commonMethod(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.commonMethod(request, response);
+	}
+	
+	private void commonMethod(HttpServletRequest request, HttpServletResponse response) {
+		AdminRegistrationInformation adminRegistrationInformation = new AdminRegistrationInformation();
+		
+		adminRegistrationInformation.setFirstName(request.getParameter("firstName"));
+		adminRegistrationInformation.setLastName("lastName");
+		adminRegistrationInformation.setOrganisationName("organisationName");
+		adminRegistrationInformation.seteMail("eMail");
+		adminRegistrationInformation.setUserID("userID");
+		adminRegistrationInformation.setPassword("password");
+		adminRegistrationInformation.setOrganisationAddress("organisationAddress");
+		adminRegistrationInformation.setAgree("agree");
+		
+		int databaseUpdateChecker = new LAdminRegistration().insert(adminRegistrationInformation);
+		
+		session = request.getSession();
+		
+		if (databaseUpdateChecker != 0) {
+			session.setAttribute("registrationMsg", "Hurray!!! Your information is successfully submitted");
+		} else {
+			session.setAttribute("registrationMsg", "Sorry!!! Submission failed");
+		}
+		/*
+		try {
+			response.sendRedirect("../mainToAdminSection/adminSignUp.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+	}
+
+}

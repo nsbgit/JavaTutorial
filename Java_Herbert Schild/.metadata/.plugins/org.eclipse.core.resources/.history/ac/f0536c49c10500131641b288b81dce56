@@ -1,0 +1,15 @@
+package test;
+
+/**
+ * This is an inner class
+ * @author Sukanta
+ *
+ */
+
+public class Inner {
+
+	void display() {
+		System.out.println("Display : outerX = " + outerX);
+	}
+	
+}

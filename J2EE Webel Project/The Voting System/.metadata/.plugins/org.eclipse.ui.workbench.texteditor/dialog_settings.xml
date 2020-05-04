@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="217" key="DIALOG_Y_ORIGIN"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="849" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="validateEmail" key="selection"/>
+		<list key="findhistory">
+			<item value="validateEmail"/>
+			<item value="emailMessage"/>
+			<item value="addm"/>
+			<item value="add"/>
+			<item value="con"/>
+			<item value="CHANGE_PASSWORD"/>
+			<item value="lab"/>
+			<item value="ADMIN_SIGN_IN"/>
+		</list>
+		<list key="replacehistory">
+			<item value="VOTER"/>
+			<item value="end"/>
+			<item value="electionDate"/>
+			<item value="Organisation"/>
+			<item value="organisation"/>
+		</list>
+	</section>
+</section>

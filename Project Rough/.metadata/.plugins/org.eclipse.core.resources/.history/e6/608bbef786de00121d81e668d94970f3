@@ -1,0 +1,36 @@
+package first;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JCheckBox;
+
+public class Simple extends JFrame
+{
+	public Simple() {
+		getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
+		
+		JScrollPane scrollPane = new JScrollPane();
+		getContentPane().add(scrollPane);
+		
+		JLabel lblHelloIAm = new JLabel("Hello i am using this");
+		lblHelloIAm.setBackground(Color.BLUE);
+		scrollPane.setViewportView(lblHelloIAm);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("New check box");
+		scrollPane.setColumnHeaderView(chckbxNewCheckBox);
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

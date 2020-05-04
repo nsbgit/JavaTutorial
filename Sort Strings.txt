@@ -1,0 +1,203 @@
+/**
+ * Define a class and store the given city names in a single dimensional array. Sort these names in alphabetical order
+ * using the Bubble Sort technique only.
+ * INPUT: Delhi, Bangalore, Agra, Mumbai, Calcutta
+ * OUTPUT: Agra, Bangalore, Calcutta, Delhi, Mumbai
+ */
+import java.io.*;
+class question2008
+{
+    public static void main(String args[]) throws IOException
+    {
+        String words[]= {"Delhi", "Bangalore", "Agra", "Mumbai", "Calcutta"};
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));       
+       
+        int len=words.length;
+        int i,j;
+        String t;
+       
+        for(i=0; i<len-1; i++)
+        {
+            for(j=0; j<len-1-i; j++)
+            {
+                if(words[j].compareTo(words[j+1])>0)
+                {
+                    t=words[j+1];
+                    words[j+1]=words[j];
+                    words[j]=t;
+                }
+            }
+        }
+        System.out.println("The cities in alphabetical order are : ");
+        for(i=0; i<len; i++)
+        {
+            System.out.print(words[i]+ " ");
+        }
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+import java.io.*;
+import java.util.Arrays;
+
+class city{
+ public static void main(String args[])
+{
+ String names[] = new String[6];
+ for(int i=0;i<6;i++)
+ {
+   names[i]= args[i];
+ }
+ Arrays.sort(names);
+ System.out.println(Arrays.toString(names));
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+class sorting
+{
+	public static void main(String[] input)
+	{
+		int k=input.length;
+		String temp=new String();
+		String names[]=new String[k+1];
+		for(int i=0;i<k;i++)
+		{ names[i]=input[i];
+	}
+
+	for(int i=0;i<k;i++)
+		for(int j=i+1;j<k;j++)
+		{
+			if(names[i].compareTo(names[j])<0)
+			{
+				temp=names[i];
+				names[i]=names[j];
+				names[j]=temp;
+			}
+			System.out.println(“Sorted order is”);
+			for(int i=0;i<k;i++)
+			{
+				System.out.println(names[i]);
+			}
+		}
+}
+
+
+
+
+
+
+
+
+Output:
+
+Java sorting Harish Ramesh Mahesh Rakesh
+Sorted order is
+Ramesh
+Rakesh
+Mahesh
+Harish
+
+Java sorting sai hari teja ravi sandeep
+Sorted order is
+teja
+sandeep
+sai
+ravi
+hari
+
+
+
+
+
+
+
+
+
+
+package introtoarrays1;
+
+
+public class IntroToArrays1 {
+
+
+public static void main(String[] args) {
+
+String [] name = new String[6];
+
+String tempStr;
+
+
+name[0]="Bob";
+name[1]="Jenny";
+name[2]="Charlie";
+name[3]="Jerry";
+name[4]="Roberta";
+name[5]="Anita";
+
+
+for(int t=0;t<name.length-1;t++){
+
+for (int i = 0; i < name.length - 1; i++) {
+
+if (name[i].compareTo(name[1 + 1]) > 0) {
+tempStr = name[i];
+name[i] = name[i + 1];
+name[i + 1] = tempStr;
+}
+}
+
+}
+for(int i=0;i<name.length;i++){
+System.out.println(name[i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+

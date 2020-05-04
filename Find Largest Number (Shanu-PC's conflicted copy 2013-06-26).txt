@@ -1,0 +1,47 @@
+//Java program to find maximum number in array
+
+//Java program to find biggest number in array
+
+//Program:-
+
+import java.util.Scanner;
+class group{
+public static void main(String arng[]){
+int value[]= new int[5];
+int temp,i;
+Scanner data = new Scanner(System.in);
+System.out.println("Enter 5 element of array" );
+// Enhanced for loop
+for(i=0; i < 5; i++ ) value[i] = data.nextInt();
+// finding Largest number
+temp = value[0];
+for(i=0; i < 5; i++ )
+{
+if(temp > value[i])
+continue;
+else
+temp = value[i];
+}
+System.out.println("Largest number in array is "+temp);
+}
+}
+
+Output:-
+
+Enter 5 element of array
+25
+154
+28522
+218
+2564
+Largest number in array is 28522
+
+Output:-
+
+Enter 5 element of array
+25
+14
+58
+26
+14
+Largest number in array is 58
